@@ -14,7 +14,7 @@ function celebrate() {
 
 function Inner({ children, scroll = false }) {
   return (
-    <div className={`card__inner items-center justify-center text-center ${scroll ? 'card__inner--scroll' : ''}`}>
+    <div className={`card__inner items-center text-center ${scroll ? 'card__inner--scroll' : 'justify-center'}`}>
       {children}
     </div>
   )
@@ -102,7 +102,7 @@ function Celebration() {
     <Inner scroll>
       <Eyebrow>The Celebration</Eyebrow>
       <span aria-hidden="true" className="quote-mark">&ldquo;</span>
-      <blockquote className="max-w-[32ch] mx-auto text-midnight -mt-3">
+      <blockquote className="max-w-[32ch] mx-auto text-midnight -mt-1">
         {/* opening aphorism — set apart as an epigraph */}
         <FadeUp delay={0.3} as="p">
           <span className="block font-serif italic text-[clamp(1.02rem,0.98rem+0.45vw,1.18rem)] leading-[1.45] text-midnight/90">

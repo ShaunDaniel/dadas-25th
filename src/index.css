@@ -10,6 +10,7 @@
 
   --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-script: "Pinyon Script", "Cormorant Garamond", cursive;
+  --font-name: "Great Vibes", "Pinyon Script", cursive;
 
   --ease-silk: cubic-bezier(0.62, 0.01, 0.30, 1);
 }
@@ -91,8 +92,9 @@ body {
 
 .card {
   position: relative;
-  width: min(94vw, 460px);
-  height: min(90svh, 720px);
+  width: min(92vw, 460px);
+  max-width: calc(100vw - 32px);
+  height: min(86svh, 700px);
   border-radius: 6px;
   /* cardstock base + the grounding drop shadow live here so the clip-path
      reveal on .card__frame never clips them away */
@@ -171,7 +173,7 @@ body {
   gap: clamp(12px, 2.4vw, 20px);
   padding: clamp(22px, 7vw, 46px) clamp(18px, 6vw, 38px);
 }
-.card__inner--scroll { padding-top: clamp(16px, 4.5vw, 32px); padding-bottom: clamp(16px, 4.5vw, 32px); gap: clamp(8px, 1.8vw, 14px); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; }
+.card__inner--scroll { justify-content: safe center; padding-top: clamp(16px, 4.5vw, 30px); padding-bottom: clamp(16px, 4.5vw, 30px); gap: clamp(7px, 1.6vw, 12px); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; }
 .card__inner--scroll::-webkit-scrollbar { width: 0; height: 0; display: none; }
 
 /* ============================================================
@@ -194,11 +196,11 @@ body {
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 500;
-  font-size: clamp(2.8rem, 2rem + 5vw, 4rem);
-  line-height: 0.4;
-  margin: 0.1em 0 0;
+  font-size: clamp(2.2rem, 1.7rem + 3.4vw, 3.1rem);
+  line-height: 0.5;
+  margin: 0.05em 0 -0.05em;
   color: var(--color-platinum-2);
-  opacity: 0.5;
+  opacity: 0.55;
   user-select: none;
 }
 
@@ -285,16 +287,22 @@ body {
 
 .nav-btn {
   position: absolute; top: 50%; transform: translateY(-50%);
-  z-index: 50; width: 44px; height: 44px; display: grid; place-items: center;
-  font-family: var(--font-serif); font-size: 1.9rem; line-height: 1;
+  z-index: 50; width: 46px; height: 46px; display: grid; place-items: center;
+  font-family: var(--font-serif); font-size: 1.9rem; line-height: 1; padding-bottom: 3px;
   color: var(--color-cream);
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(199,201,204,0.4); border-radius: 50%;
-  cursor: pointer; opacity: 0.7;
-  transition: opacity 220ms ease, background-color 220ms ease, transform 220ms ease;
+  background: rgba(11,19,43,0.62);
+  border: 1px solid rgba(199,201,204,0.6);
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(255,255,255,0.08);
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+  cursor: pointer; opacity: 0.95;
+  transition: background-color 220ms ease, transform 220ms ease, opacity 220ms ease;
 }
-.nav-btn:hover { opacity: 1; background: rgba(255,255,255,0.12); }
-.nav-btn:disabled { opacity: 0.2; cursor: default; }
+.nav-btn:hover { background: rgba(11,19,43,0.82); opacity: 1; }
+.nav-btn:disabled { opacity: 0.25; cursor: default; }
+@media (max-width: 480px) {
+  .nav-btn { width: 38px; height: 38px; font-size: 1.5rem; }
+}
 
 .dot {
   width: 9px; height: 9px; padding: 0; border-radius: 50%;

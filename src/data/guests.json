@@ -1,8 +1,13 @@
 {
-  "adi": {
-    "name": "Adi",
-    "message": "From spontaneous plans to lifelong memories — twenty-five years of Dada would not shine half as bright without you in the frame.",
-    "img": "adi"
+  "shaun": {
+    "name": "Shaun",
+    "message": "gang gangggggggggggggggg",
+    "img": "shaun.png"
+  },
+  "ranu": {
+    "name": "Ranu",
+    "message": "Some people feel like family the moment they arrive — and Dada's silver year simply isn't complete without you in it.",
+    "img": "ranu"
   },
   "priya": {
     "name": "Priya",
@@ -14,14 +19,59 @@
     "message": "Twenty-five years, and the stories with you in them are still his favourite ones to tell. Come write the next chapter.",
     "img": "khyati"
   },
+  "adeena": {
+    "name": "Adeena",
+    "message": "From the small moments to the big ones, you've been part of the story. Come celebrate twenty-five years with us.",
+    "img": "adeena"
+  },
+  "tibra": {
+    "name": "Tibra",
+    "message": "Dada's greatest fortune is the people beside him — and you're one of them. We'd be honoured to have you there.",
+    "img": "tibra"
+  },
+  "kriti": {
+    "name": "Kriti",
+    "message": "Twenty-five years, and the best chapters all have you in them. Let's add another.",
+    "img": "kriti"
+  },
   "raji": {
     "name": "Raji",
     "message": "Twenty-five years, and the stories with you in them are still his favourite ones to tell. Come write the next chapter.",
     "img": "raji"
   },
-  "shaun": {
-    "name": "Shaun",
-    "message": "gang gangggggggggggggggg",
-    "img": "shaun.png"
+  "kelp": {
+    "name": "Kelp",
+    "message": "A celebration only feels whole with the right people in the room. For Dada, you're one of them.",
+    "img": "kelp"
+  },
+  "sanjeet": {
+    "name": "Sanjeet",
+    "message": "Some people feel like family the moment they arrive — and Dada's silver year simply isn't complete without you in it.",
+    "img": "sanjeet"
+  },
+  "raunak": {
+    "name": "Raunak",
+    "message": "From the small moments to the big ones, you've been part of the story. Come celebrate twenty-five years with us.",
+    "img": "raunak"
+  },
+  "shailvi": {
+    "name": "Shailvi",
+    "message": "Dada's greatest fortune is the people beside him — and you're one of them. We'd be honoured to have you there.",
+    "img": "shailvi"
+  },
+  "pranat": {
+    "name": "Pranat",
+    "message": "Twenty-five years, and the best chapters all have you in them. Let's add another.",
+    "img": "pranat"
+  },
+  "nush": {
+    "name": "Nush",
+    "message": "A celebration only feels whole with the right people in the room. For Dada, you're one of them.",
+    "img": "nush"
+  },
+  "adi": {
+    "name": "Adi",
+    "message": "A celebration only feels whole with the right people in the room. For Dada, you're one of them.",
+    "img": "adi"
   }
 }

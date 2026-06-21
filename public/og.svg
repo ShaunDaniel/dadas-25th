@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Dada's 25th — Invitation">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Pinyon+Script&amp;display=swap');
+      .serif { font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; }
+      .script { font-family: 'Pinyon Script', 'Cormorant Garamond', cursive; }
+    </style>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F0E4"/>
+      <stop offset="0.4" stop-color="#F1E9DB"/>
+      <stop offset="1" stop-color="#ECE2D0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="-0.1" r="0.9">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="foil" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9b9da3" stop-opacity="0"/>
+      <stop offset="0.18" stop-color="#9b9da3"/>
+      <stop offset="0.5" stop-color="#f6f7f8"/>
+      <stop offset="0.82" stop-color="#9b9da3"/>
+      <stop offset="1" stop-color="#9b9da3" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- cardstock -->
+  <rect width="1200" height="630" fill="url(#paper)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- silver double-rule frame -->
+  <rect x="34" y="34" width="1132" height="562" rx="8" fill="none" stroke="#B8BAC0" stroke-width="1.5"/>
+  <rect x="46" y="46" width="1108" height="538" rx="4" fill="none" stroke="#C7C9CC" stroke-width="1" stroke-opacity="0.6"/>
+
+  <!-- corner gems -->
+  <g fill="#B8BAC0">
+    <rect x="42" y="42" width="9" height="9" transform="rotate(45 46.5 46.5)"/>
+    <rect x="1149" y="42" width="9" height="9" transform="rotate(45 1153.5 46.5)"/>
+    <rect x="42" y="579" width="9" height="9" transform="rotate(45 46.5 583.5)"/>
+    <rect x="1149" y="579" width="9" height="9" transform="rotate(45 1153.5 583.5)"/>
+  </g>
+
+  <!-- XXV emblem -->
+  <circle cx="600" cy="122" r="42" fill="none" stroke="#B8BAC0" stroke-width="1.5"/>
+  <circle cx="600" cy="122" r="36" fill="none" stroke="#C7C9CC" stroke-width="1" stroke-opacity="0.6"/>
+  <text class="serif" x="600" y="133" text-anchor="middle" font-size="30" font-weight="600" letter-spacing="3" fill="#0B132B">XXV</text>
+
+  <!-- eyebrow -->
+  <text class="serif" x="600" y="222" text-anchor="middle" font-size="30" font-weight="500" letter-spacing="14" fill="#0B132B" fill-opacity="0.62">A SILVER JUBILEE</text>
+
+  <!-- foil divider -->
+  <rect x="500" y="248" width="200" height="2" fill="url(#foil)"/>
+  <rect x="595" y="244" width="10" height="10" transform="rotate(45 600 249)" fill="#C7C9CC"/>
+
+  <!-- headline -->
+  <text class="serif" x="600" y="400" text-anchor="middle" font-size="150" font-weight="600" fill="#0B132B">Dada&#8217;s 25th</text>
+
+  <!-- script accent -->
+  <text class="script" x="600" y="492" text-anchor="middle" font-size="86" fill="#0B132B" fill-opacity="0.92">Invitation</text>
+
+  <!-- footer -->
+  <text class="serif" x="600" y="556" text-anchor="middle" font-size="27" font-weight="500" letter-spacing="8" fill="#0B132B" fill-opacity="0.7">17TH JULY 2026 &#160;&#183;&#160; VACAY HOMES BLR</text>
+</svg>

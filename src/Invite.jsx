@@ -103,22 +103,16 @@ export default function Invite({ guest }) {
   }
   const onPointerLeave = () => { rx.set(0); ry.set(0) }
 
-  /* Signature transition: a silver light-seam sweeps and the new card is
-     unveiled behind it (curtain reveal), while the old card recedes. */
+  /* 3D card turn — a refined rotateY pivot with perspective + a little lateral
+     drift and depth. Transform + opacity only, so it stays smooth on phones.
+     Kept to a partial turn (no edge-on vanish, no backface flicker). */
   const stageVariants = reduce
     ? { enter: { opacity: 0 }, center: { opacity: 1 }, exit: { opacity: 0 } }
     : {
-        enter: { opacity: 1 },
-        center: { opacity: 1 },
-        exit: (d) => ({ opacity: 0, y: d >= 0 ? -34 : 34, scale: 0.955, filter: 'blur(12px)' }),
+        enter: (d) => ({ opacity: 0, rotateY: d >= 0 ? 42 : -42, x: d >= 0 ? '12%' : '-12%', scale: 0.9 }),
+        center: { opacity: 1, rotateY: 0, x: '0%', scale: 1 },
+        exit: (d) => ({ opacity: 0, rotateY: d >= 0 ? -42 : 42, x: d >= 0 ? '-12%' : '12%', scale: 0.9 }),
       }
-  const fwd = dir >= 0
-  const frameInitial = reduce
-    ? { opacity: 0 }
-    : { clipPath: fwd ? 'inset(100% 0% 0% 0%)' : 'inset(0% 0% 100% 0%)', filter: 'blur(8px)' }
-  const frameAnimate = reduce
-    ? { opacity: 1 }
-    : { clipPath: 'inset(0% 0% 0% 0%)', filter: 'blur(0px)' }
 
   return (
     <main
@@ -136,7 +130,10 @@ export default function Invite({ guest }) {
       <Dust count={16} />
 
       {/* monogram */}
-      <div className="absolute top-5 left-1/2 -translate-x-1/2 z-40 text-platinum/70 tracking-[0.5em] text-xs uppercase pl-2">
+      <div
+        className="absolute left-1/2 -translate-x-1/2 z-40 text-platinum/70 tracking-[0.5em] text-xs uppercase whitespace-nowrap pointer-events-none"
+        style={{ top: 'calc(env(safe-area-inset-top, 0px) + 14px)', paddingLeft: '0.5em' }}
+      >
         Dada · XXV
       </div>
 
@@ -155,32 +152,19 @@ export default function Invite({ guest }) {
               initial="enter"
               animate="center"
               exit="exit"
-              transition={{ duration: reduce ? 0.45 : 0.6, ease: EASE }}
+              transition={{ duration: reduce ? 0.45 : 0.72, ease: EASE }}
               className="absolute inset-0 grid place-items-center px-4"
-              style={{ transformStyle: 'preserve-3d' }}
+              style={{ transformStyle: 'preserve-3d', transformPerspective: 1100 }}
             >
               <div className="card">
-                <motion.div
-                  className="card__frame"
-                  initial={frameInitial}
-                  animate={frameAnimate}
-                  transition={{ duration: reduce ? 0.45 : 0.95, ease: EASE }}
-                >
+                <div className="card__frame">
                   <span className="card__deco" />
                   <Fil pos="tl" />
                   <Fil pos="tr" />
                   <Fil pos="br" />
                   <Fil pos="bl" />
-                  {!reduce && (
-                    <motion.span
-                      className="seam"
-                      initial={{ top: fwd ? '100%' : '0%', opacity: 0 }}
-                      animate={{ top: fwd ? '-2%' : '102%', opacity: [0, 1, 1, 0] }}
-                      transition={{ duration: 0.95, ease: EASE, times: [0, 0.12, 0.85, 1] }}
-                    />
-                  )}
                   {slides[index].node}
-                </motion.div>
+                </div>
               </div>
             </motion.div>
           </AnimatePresence>
