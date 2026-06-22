@@ -17,7 +17,7 @@ export default async function handler(req) {
 
     if (guests[slug]) {
       const name = guests[slug].name
-      const ogUrl = new URL(`/api/og?name=${encodeURIComponent(name)}`, req.url).toString()
+      const ogUrl = new URL(`/guests/og-${slug}.png`, req.url).toString()
       
       html = html.replace(
         'content="https://dadas-25th.vercel.app/og.png"',
