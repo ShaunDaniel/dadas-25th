@@ -88,5 +88,10 @@
     "name": "Verona",
     "message": "A celebration only feels whole with the right people in the room. For Dada, you're one of them.",
     "img": "verona.jpeg"
+  },
+  "tusu": {
+    "name": "Tusu",
+    "message": "A celebration only feels whole with the right people in the room. For Dada, you're one of them.",
+    "img": "tusu.jpeg"
   }
 }
