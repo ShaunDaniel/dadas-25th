@@ -84,9 +84,11 @@ function main() {
   console.log('\n🔒  seal-guests: encrypting guest images …\n')
 
   if (!fs.existsSync(PRIVATE_DIR)) {
-    console.log('   ⚠  private/guests/ not found — nothing to seal.')
-    // Still write an empty map so the app builds
-    fs.writeFileSync(MAP_OUT, JSON.stringify({}))
+    console.log('   ⚠  private/guests/ not found — assuming we are in CI/Vercel and using pre-encrypted blobs.')
+    // If the map doesn't exist at all, write an empty one to prevent build crashes
+    if (!fs.existsSync(MAP_OUT)) {
+      fs.writeFileSync(MAP_OUT, JSON.stringify({}))
+    }
     return
   }
 
