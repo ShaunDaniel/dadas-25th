@@ -5,7 +5,13 @@ export const EASE = [0.62, 0.01, 0.30, 1]
 
 /* Animated letter-by-letter reveal (React-Bits "SplitText" style) */
 export function SplitText({ text, className = '', delay = 0, stagger = 0.045 }) {
-  const chars = useMemo(() => Array.from(String(text)), [text])
+  const chars = useMemo(() => {
+    if (typeof Intl !== 'undefined' && Intl.Segmenter) {
+      const segmenter = new Intl.Segmenter('en', { granularity: 'grapheme' })
+      return Array.from(segmenter.segment(String(text)), s => s.segment)
+    }
+    return Array.from(String(text))
+  }, [text])
   return (
     <span className={className} aria-label={text}>
       {chars.map((c, i) => (

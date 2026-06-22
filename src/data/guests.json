@@ -32,7 +32,7 @@
   "kriti": {
     "name": "Kriti",
     "message": "Twenty-five years, and the best chapters all have you in them. Let's add another.",
-    "img": "kriti"
+    "img": "kriti.jpeg"
   },
   "raji": {
     "name": "Raji",
@@ -73,5 +73,20 @@
     "name": "Adi",
     "message": "A celebration only feels whole with the right people in the room. For Dada, you're one of them.",
     "img": "adi"
+  },
+  "maa": {
+    "name": "माँ",
+    "message": "A celebration only feels whole with the right people in the room. For Dada, you're one of them.",
+    "img": "maa.jpeg"
+  },
+  "didi": {
+    "name": "Didi",
+    "message": "A celebration only feels whole with the right people in the room. For Dada, you're one of them.",
+    "img": "didi.jpeg"
+  },
+  "verona": {
+    "name": "Verona",
+    "message": "A celebration only feels whole with the right people in the room. For Dada, you're one of them.",
+    "img": "verona.jpeg"
   }
 }

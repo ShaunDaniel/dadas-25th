@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "seal": "node scripts/seal-guests.cjs",
+    "build": "node scripts/seal-guests.cjs && vite build",
     "preview": "vite preview --port 4173"
   },
   "dependencies": {

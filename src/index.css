@@ -9,8 +9,8 @@
   --color-midnight-2: #11192F;
 
   --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --font-script: "Pinyon Script", "Cormorant Garamond", cursive;
-  --font-name: "Great Vibes", "Pinyon Script", cursive;
+  --font-script: "Pinyon Script", "Cormorant Garamond", "Amita", cursive;
+  --font-name: "Great Vibes", "Pinyon Script", "Amita", cursive;
 
   --ease-silk: cubic-bezier(0.62, 0.01, 0.30, 1);
 }

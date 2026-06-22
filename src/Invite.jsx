@@ -21,8 +21,8 @@ function Fil({ pos }) {
   )
 }
 
-export default function Invite({ guest }) {
-  const slides = useMemo(() => buildSlides(guest), [guest])
+export default function Invite({ guest, slug }) {
+  const slides = useMemo(() => buildSlides(guest, slug), [guest, slug])
   const n = slides.length
   const reduce = useReducedMotion()
 
@@ -141,6 +141,10 @@ export default function Invite({ guest }) {
         <motion.div
           className="absolute inset-0"
           style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
+          /* one-time page-entry pop — plays on first mount for every link */
+          initial={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.84, y: 46, filter: 'blur(16px)' }}
+          animate={{ opacity: 1, scale: 1, y: 0, filter: 'blur(0px)' }}
+          transition={{ duration: reduce ? 0.5 : 1.15, ease: EASE }}
           onPointerMove={onPointerMove}
           onPointerLeave={onPointerLeave}
         >

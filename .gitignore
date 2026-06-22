@@ -2,3 +2,7 @@ node_modules
 dist
 .DS_Store
 *.local
+private/
+src/data/.guest-map.json
+public/guests/*.bin
+.guest-key
