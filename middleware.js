@@ -17,7 +17,7 @@ const ALLOWED_ORIGINS = [
 
 export default function middleware(request) {
   const url = new URL(request.url)
-  
+
   // We only want to protect the encrypted binary blobs.
   // Allow all other files (png, jpg, etc.) to pass through natively.
   if (!url.pathname.endsWith('.bin')) {
