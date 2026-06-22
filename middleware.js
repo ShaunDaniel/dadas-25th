@@ -17,8 +17,10 @@ const ALLOWED_ORIGINS = [
 
 export default function middleware(request) {
   const url = new URL(request.url)
-  // Allow social media bots and anyone to fetch the generated OG images
-  if (url.pathname.endsWith('.png')) {
+  
+  // We only want to protect the encrypted binary blobs.
+  // Allow all other files (png, jpg, etc.) to pass through natively.
+  if (!url.pathname.endsWith('.bin')) {
     return undefined
   }
 
