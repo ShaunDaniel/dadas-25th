@@ -217,7 +217,10 @@ function Details() {
         <Row label="Time" delay={0.5}>
           2:00 in the afternoon
         </Row>
-        <Row label="Venue" delay={0.65}>
+        <Row label="Dress Code" delay={0.65}>
+          All White
+        </Row>
+        <Row label="Venue" delay={0.8}>
           <a
             className="text-midnight no-underline border-b border-platinum-2 pb-px hover:border-midnight transition-colors"
             href="https://maps.app.goo.gl/SezZ1JKGFyVz3q5Y8?g_st=iw"
@@ -232,7 +235,7 @@ function Details() {
           </span>
         </Row>
       </dl>
-      <FadeUp delay={0.85} className="mt-3">
+      <FadeUp delay={1.0} className="mt-3">
         <a
           className="group relative inline-block overflow-hidden uppercase tracking-[0.28em] text-[0.74rem] font-medium px-7 py-3 border border-platinum-2 rounded-[2px] text-midnight shadow-[inset_0_0_0_1px_rgba(255,255,255,0.4)] hover:bg-midnight/5 transition-colors"
           href={cal}
