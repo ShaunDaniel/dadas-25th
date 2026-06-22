@@ -141,11 +141,7 @@ function Announcement() {
           Twenty-Five Years
         </span>
       </FadeUp>
-      <FadeUp delay={1.1} as="p">
-        <span className="block tracking-[0.36em] opacity-55 text-[clamp(0.74rem,0.66rem+0.5vw,0.9rem)] pl-[0.36em]">
-          2001 &nbsp;&ndash;&nbsp; 2026
-        </span>
-      </FadeUp>
+
     </Inner>
   )
 }
