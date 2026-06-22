@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/(assets|guests)/(.*)",
+      "destination": "/$1/$2"
+    },
+    {
+      "source": "/(favicon\\.svg|og\\.png)",
+      "destination": "/$1"
+    },
+    {
+      "source": "/:slug",
+      "destination": "/api/invite"
+    }
+  ]
+}
