@@ -16,6 +16,12 @@ const ALLOWED_ORIGINS = [
 ]
 
 export default function middleware(request) {
+  const url = new URL(request.url)
+  // Allow social media bots and anyone to fetch the generated OG images
+  if (url.pathname.endsWith('.png')) {
+    return undefined
+  }
+
   const referer = request.headers.get('referer') || ''
   const origin = request.headers.get('origin') || ''
 
