@@ -268,11 +268,22 @@ function Closing({ guest }) {
       </motion.p>
       <h2 className="m-0 leading-none">
         <SplitText
-          text={guest ? `See you there, ${guest.name}` : 'See you there'}
+          text="See you there,"
           className="font-script text-midnight/90 text-[clamp(1.9rem,1.4rem+5vw,2.9rem)]"
           stagger={0.06}
           delay={0.7}
         />
+        {guest && (
+          <>
+            <br />
+            <SplitText
+              text={guest.name}
+              className="font-script text-midnight/90 text-[clamp(1.9rem,1.4rem+5vw,2.9rem)]"
+              stagger={0.06}
+              delay={0.7 + 'See you there, '.length * 0.06}
+            />
+          </>
+        )}
       </h2>
       <Ornament delay={1.1} mini />
     </Inner>
