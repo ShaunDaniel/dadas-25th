@@ -6,12 +6,12 @@
   },
   "ranu": {
     "name": "Ranu",
-    "message": "Some people feel like family the moment they arrive — and Dada's silver year simply isn't complete without you in it.",
+    "message": "A quarter-century is a beautiful milestone, but it's the people who make it truly special. Your presence would mean the world to him.",
     "img": "ranu"
   },
   "priya": {
     "name": "Priya",
-    "message": "Some people feel like family the moment they arrive. Dada's silver year simply isn't complete unless you're standing right beside him.",
+    "message": "Some people light up the room just by walking in. Dada's silver year simply wouldn't be as bright without you celebrating with us.",
     "img": "priya"
   },
   "khyati": {
@@ -36,7 +36,7 @@
   },
   "raji": {
     "name": "Raji",
-    "message": "Twenty-five years, and the stories with you in them are still his favourite ones to tell. Come write the next chapter.",
+    "message": "The best memories of the last twenty-five years have you in them. Join us as we raise a glass to the next twenty-five.",
     "img": "raji"
   },
   "kelp": {
@@ -46,7 +46,7 @@
   },
   "sanjeet": {
     "name": "Sanjeet",
-    "message": "Some people feel like family the moment they arrive — and Dada's silver year simply isn't complete without you in it.",
+    "message": "Through every season of the past twenty-five years, your friendship has been a constant. We can't wait to celebrate this milestone together.",
     "img": "sanjeet"
   },
   "raunaq": {
@@ -56,22 +56,22 @@
   },
   "shailvi": {
     "name": "Shailvi",
-    "message": "Dada's greatest fortune is the people beside him — and you're one of them. We'd be honoured to have you there.",
+    "message": "A milestone this significant is meant to be shared with our favorite people. Dada's silver jubilee needs you there to be perfect.",
     "img": "shailvi"
   },
   "pranat": {
     "name": "Pranat",
-    "message": "Twenty-five years, and the best chapters all have you in them. Let's add another.",
+    "message": "You've been such a meaningful part of the journey so far. Come help us ring in a quarter-century in style.",
     "img": "pranat"
   },
   "nush": {
     "name": "Nush",
-    "message": "A celebration only feels whole with the right people in the room. For Dada, you're one of them.",
+    "message": "Twenty-five years of life, laughter, and love. Your spirit is exactly what this celebration needs to feel complete.",
     "img": "nush"
   },
   "adi": {
     "name": "Adi",
-    "message": "A celebration only feels whole with the right people in the room. For Dada, you're one of them.",
+    "message": "Some friendships define a lifetime. Dada's twenty-fifth year celebration wouldn't be the same without you standing with us.",
     "img": "adi"
   },
   "maa": {
@@ -93,5 +93,10 @@
     "name": "Tusu",
     "message": "A celebration only feels whole with the right people in the room. For Dada, you're one of them.",
     "img": "tusu.jpeg"
+  },
+  "aish": {
+    "name": "Aish",
+    "message": "Every great celebration needs the right souls to bring it to life. We would be absolutely thrilled to have you join Dada's silver jubilee.",
+    "img": "aish.jpeg"
   }
 }
